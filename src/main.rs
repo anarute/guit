@@ -4,15 +4,13 @@ mod lista_comandos;
 
 fn main() {
     let commands_map = lista_comandos::get_command_map();
-    // let flags_map = lista_comandos::get_flags_map();
-
     let args: Vec<String> = env::args().skip(1).collect();
 
     let git_command = match args.get(0) {
         Some(user_command) => match commands_map.get(user_command.as_str()) {
             Some(&git_command) => git_command,
             None => {
-                eprintln!("Tradução não encontrada, tentando rodar git com o comando {} enviado.", user_command.as_str());
+                eprintln!("Tradução não encontrada, tentando rodar `git {}`.", user_command.as_str());
                 user_command.as_str()
             }
         },

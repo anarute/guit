@@ -14,7 +14,7 @@ Instale o pacote usando `cargo install guit`.
 
 Você pode usar direto `guit <comando>`, exemplo: `guit puxa` para rodar `git pull`.
 
-Ou se quiser pode até criar um ~alias~ apelido para usar git direto passando os comandos em português, como `git puxar`.
+Ou se quiser pode até criar um ~alias~ apelido para usar git direto passando os comandos em português, como `git puxa` e `git empurra`.
 
 Para isso, adicione `alias git='guit'` na configuração do seu shell, se for BASH, em `~/.bashrc`.
 
